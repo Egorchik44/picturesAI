@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Удаление бликов с фотографий с использованием ИИ">
+    <title>Удаление бликов</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="../static/style_button.css">
+    <link rel="stylesheet" href="../static/glare_removal.css">
+    <script>
+        // Применяем тему мгновенно при загрузке страницы
+        let theme = localStorage.getItem('theme');
+        if(theme) {
+            document.documentElement.className = theme;
+        } else {
+            document.documentElement.className = 'light-theme';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Удаление бликов</h1>
+        <nav>
+            <a href="main.html" class="home-button">Главная</a>
+        </nav>
+        <button id="theme-toggle">Сменить тему</button>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>О услуге</h2>
+            <p>Наш сервис использует передовые технологии искусственного интеллекта для преобразования черно-белых фотографий в яркие, красочные изображения.</p>
+        </section>
+        <section class="upload-section">
+            <h2>Загрузите фото</h2>
+            <form id="upload-form" enctype="multipart/form-data">
+                <div class="file-upload">
+                    <label for="photo-upload" class="button upload-button">Выберите файл</label>
+                    <input type="file" id="photo-upload" name="photo" accept="image/*" required>
+                </div>
+                <button type="submit" class="button submit-button">Удалить блики</button>
+            </form>
+        </section>       
+        <section class="result-section" id="result-section">
+            <h2>Сравнение результатов</h2>
+            <div class="image-comparison">
+                <img id="original-photo">
+                <img id="glare-removed-photo">
+                <input type="range" min="1" max="100" value="50" class="slider" id="comparison-slider">
+                <div class="slider-button"></div>
+                
+            </div>
+            <div class="download-container">
+                <button id="download-btn" class="download-button" disabled>
+                    <i class="fas fa-download"></i> Скачать результат
+                </button>
+            </div>
+        </section>
+        <section class="service-details">
+            <h2>Как это работает</h2>
+            <ul>
+                <li>Загрузите фотографию с бликами</li>
+                <li>ИИ анализирует изображение и идентифицирует области с бликами</li>
+                <li>Алгоритм удаляет блики, восстанавливая скрытые детали</li>
+                <li>Получите очищенную версию вашей фотографии</li>
+            </ul>
+        </section>
+        <section class="benefits">
+            <h2>Преимущества</h2>
+            <ul>
+                <li>Улучшение качества фотографий через стекло или воду</li>
+                <li>Восстановление деталей, скрытых за бликами</li>
+                <li>Повышение четкости портретов с очками</li>
+                <li>Улучшение фотографий произведений искусства</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Обработка фото с ИИ. Все права защищены.</p>
+    </footer>
+    <script src="../static/script_main.js"></script>
+    <script src="../static/script_glare_removal.js"></script>
+</body>
+</html>

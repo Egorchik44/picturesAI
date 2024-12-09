@@ -1,0 +1,126 @@
+/* Основные стили для кнопок */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для кнопки загрузки файла */
+.file-upload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+/* Прячем стандартный input для загрузки файла */
+.file-upload input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: pointer;
+}
+
+/* Применяем стили как у кнопки "Разукрасить фото" */
+.upload-button {
+    background-color: var(--accent-color);
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--bg-color);
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.upload-button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Стили для кнопки отправки формы */
+.submit-button {
+    background-color: var(--primary-color);
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Анимация для кнопок */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(var(--accent-color), 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(var(--accent-color), 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(var(--accent-color), 0);
+    }
+}
+
+.button:focus {
+    animation: pulse 1.5s infinite;
+}
+
+
+/* Стили для кнопки скачивания */
+.download-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.download-button {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.download-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Обработка фотографий с использованием ИИ">
+    <title>Главная</title>
+    <link rel="stylesheet" href="../static/styles.css">    
+    <script>
+        // Применяем тему мгновенно при загрузке страницы
+        let theme = localStorage.getItem('theme');
+        if(theme) {
+            document.documentElement.className = theme;
+        } else {
+            document.documentElement.className = 'light-theme';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Обработка фото с ИИ</h1>
+        <button id="theme-toggle">Сменить тему</button> 
+    </header>
+    <main>
+        <section class="intro">
+            <h2>О сервисе</h2>
+            <p>Сервис по обработке изображений использует современные технологии искусственного интеллекта. Мы предлагаем разукрашивание черно-белых фотографий, удаление бликов и улучшение качества снимков.</p>
+        </section>
+        <section class="skills">
+            <h2>Услуги</h2>
+            <ul>
+                <li>
+                    <a href="colorization.html">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Разукрашивание фотографий</h3>
+                        <p>Превращаю черно-белые снимки в яркие цветные изображения</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="glare-removal.html">
+                        <i class="fas fa-sun"></i>
+                        <h3>Удаление бликов</h3>
+                        <p>Устраняю нежелательные блики и артефакты с ваших фотографий</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="quality-enhancement.html">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                        <h3>Улучшение качества</h3>
+                        <p>Повышаю четкость и детализацию изображений</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="contact">
+            <h2>Свяжитесь со мной</h2>
+            <p>Если вам нужна обработка фотографий или консультация, напишите мне!</p>
+            <a href="mailto:youremail@example.com">Отправить сообщение</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Обработка фото с ИИ. Все права защищены.</p>
+    </footer>
+    <script src="../static/script_main.js"></script>
+</body>
+</html>
