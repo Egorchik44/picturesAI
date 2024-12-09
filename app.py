@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 app = Flask(__name__)
 CORS(app)
 
-SHARPEN_MODEL_PATH = r"C:\Users\Егор\Downloads\ai-quasar-git\model\photo_sharpen_model.h5"
+SHARPEN_MODEL_PATH = "..\model\photo_sharpen_model.h5"
 
 # Обработка запроса на колоризацию
 @app.route('/colorize', methods=['POST'])

@@ -4,8 +4,8 @@ from torch import nn
 import logging
 
 logger = logging.getLogger(__name__)
-COLORIZED_MODEL_PATH = r"C:\Users\Егор\Desktop\4 курс\Проектная деятельность\picturesAI\model\image_colorization_model-good.pt"
-GLARE_MODEL_PATH = r"C:\Users\Егор\Downloads\ai-quasar-git\model\unet_glare_removal.pth"
+COLORIZED_MODEL_PATH = "..\model\image_colorization_model-good.pt"
+GLARE_MODEL_PATH = "..\model\unet_glare_removal.pth"
 
 
 # Модель по раскрашиванию изображений
